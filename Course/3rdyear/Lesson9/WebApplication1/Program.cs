@@ -12,6 +12,13 @@ builder.Services.AddDbContext<TaskContext>(options =>
 var app = builder.Build();
 
 
+Host.CreateDefaultBuilder(args)
+        .ConfigureWebHostDefaults(webBuilder =>
+        {
+            webBuilder.UseStartup<Program>();
+        });
+
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
