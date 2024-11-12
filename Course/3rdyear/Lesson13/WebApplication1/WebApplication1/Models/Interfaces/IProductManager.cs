@@ -1,6 +1,11 @@
-namespace WebApplication1.Models.Interfaces;
+using WebApplication1.Models.Models;
 
-public class IProductManager
+namespace WebApplication1.Models.Interfaces
 {
-    
+    public interface IProductManager
+    {
+        void CreateProduct(ProductModel product);
+        List<ProductModel> GetAllProducts();
+        string UpdateProduct(int id, ProductModel product);
+    }
 }
