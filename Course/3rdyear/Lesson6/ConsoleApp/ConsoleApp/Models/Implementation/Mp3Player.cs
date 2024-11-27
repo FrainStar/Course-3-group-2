@@ -1,6 +1,12 @@
-namespace ConsoleApp.Models.Implementation;
+using ConsoleApp.Models.Interfaces;
 
-public class Mp3Player
+namespace ConsoleApp.Models.Implementation
 {
-    
+    public class Mp3Player : IAudioPlayer
+    {
+        public void PlayAudio(string? fileName)
+        {   
+            Console.WriteLine($"Mp3Player::PlayAudio({fileName})");
+        }
+    }
 }

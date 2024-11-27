@@ -1,6 +1,12 @@
-namespace ConsoleApp.Models.Implementation;
+using ConsoleApp.Models.Interfaces;
 
-public class WavPLayer
+namespace ConsoleApp.Models.Implementation
 {
-    
+    public class WavPlayer : IAudioPlayer
+    {
+        public void PlayAudio(string? fileName)
+        {   
+            Console.WriteLine($"WavPlayer::PlayAudio({fileName})");
+        }
+    }
 }
